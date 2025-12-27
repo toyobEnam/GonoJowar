@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: 'Kalpurush', 'Noto Serif Bengali', serif;
+}
+
+header {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+header h3 {
+    font-family: 'SolaimanLipi', 'Noto Serif Bengali', serif;
+    font-size: 16px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+.storyContent {
+    max-width: 700px;
+    margin: 40px auto;
+    font-size: 18.5px;
+    line-height: 1.95;
+}
