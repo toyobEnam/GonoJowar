@@ -60,3 +60,35 @@ const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") {
     applyTheme(true);
 }
+
+// ================================
+// Theme Toggle Spam Detection
+// ================================
+
+let themeClickTimes = [];
+
+const themeNotice = document.getElementById("themeNotice");
+
+function checkThemeSpam() {
+    const now = Date.now();
+
+    // last 2 seconds only
+    themeClickTimes = themeClickTimes.filter(
+        time => now - time <= 2000
+    );
+
+    // mobile only + 4 rapid clicks
+    if (themeClickTimes.length >= 4 && window.innerWidth <= 768) {
+        showThemeNotice();
+        themeClickTimes = []; // reset after showing
+    }
+}
+
+function showThemeNotice() {
+    themeNotice.classList.add("show");
+
+    // auto hide after 3s
+    setTimeout(() => {
+        themeNotice.classList.remove("show");
+    }, 3000);
+}

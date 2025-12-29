@@ -268,3 +268,31 @@ body.dark .nav-list li button.theme-btn:hover {
 body.dark .theme-btn-icon {
     color: #e5e7eb;
 }
+
+/* =========================
+   THEME SPAM NOTICE (MOBILE)
+========================= */
+.theme-notice {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+
+    padding: 8px 14px;
+    font-size: 13px;
+    border-radius: 20px;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.4s ease;
+    z-index: 2000;
+}
+
+/* show state */
+.theme-notice.show {
+    opacity: 1;
+}
