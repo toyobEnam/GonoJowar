@@ -1,48 +1,105 @@
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    padding: 5px;
-    font-family: 'Kalpurush', 'Noto Serif Bengali', serif;
-    background-color: #e0e0e0;
-    color: #111;
+  margin: 0;
+  font-family: 'Kalpurush', 'Noto Serif Bengali', serif;
+  background: #f5f5f5;
 }
 
-h1 {
-    text-align: center;
-    font-weight: 600;
+/* ===== Grid Container ===== */
+.gridContainer {
+  min-height: 100vh;
+  display: grid;
+
+  /* Desktop layout */
+  grid-template-columns: 240px 1fr 350px;
+  grid-template-rows: auto 1fr auto;
+
+  grid-template-areas:
+    "header header header"
+    "left   main   right"
+    "footer footer footer";
 }
 
-p {
-    text-align: left;
+/* ===== Grid Areas ===== */
+.header {
+  grid-area: header;
+  padding: 20px;
+  background: #eaeaea;
+  text-align: center;
 }
 
-.story-cover {
-    width: 550px;
-    height: auto;
-    display: block;
-    left: 20px;
-    margin: 20px auto;
-}
-
-@media (max-width: 992px) {
-    .story-cover {
-        width: 75%;
-    }
-    p {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 576px) {
-    .story-cover {
-        width: 95%;
-    p {
-        font-size: 19px;
-    }
-    }
+.leftBar {
+  grid-area: left;
+  padding: 20px;
+  background: #dcdcdc;
 }
 
 .mainContent {
-    padding: 10px 15px;
-    font-size: 25px;
+  grid-area: main;
+  padding: 25px 80px;
+  background: #d8d8d8;
+}
+
+.rightBar {
+  grid-area: right;
+  padding: 20px;
+  background: #dcdcdc;
+}
+
+.footer {
+  grid-area: footer;
+  padding: 20px;
+  background: #eaeaea;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+    .mainContent {
+    grid-area: main;
+    padding: 25px 25px;
+    background: #d8d8d8;
+}
+}
+
+@media (max-width: 992px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+
+  .leftBar,
+  .rightBar {
+    display: none;
+  }
+}
+
+.mainContent p {
+    font-size: 21px;
+    line-height: 1.5;
+    margin-bottom: 1.3em;
+    letter-spacing: 0.01em;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .mainContent p {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .mainContent p {
+        font-size: 19px;
+        line-height: 1.4;
+    }
 }
 
