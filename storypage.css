@@ -142,11 +142,19 @@ body {
 
 /* =============== Page Switch Button =============== */
 
+.upperNAV {
+  width: 100%;
+}
+
 .episode-switch {
   margin: 60px 0 30px;
   padding-top: 20px;
   border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 
 .ep-list {
   display: flex;
