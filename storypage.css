@@ -185,3 +185,7 @@ body {
   display: inline-block;
   margin-bottom: 10px;
 }
+
+#theEndText {
+  text-align: center;
+}
