@@ -1,0 +1,10 @@
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Kalpurush', 'Noto Serif Bengali', serif;
+  background: #e0e0e0;
+}
