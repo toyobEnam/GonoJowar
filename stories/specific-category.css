@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Serif Bengali', serif;
+  background-color: #f7f7f7;
+  color: #222;
+}
+
+/* Header */
+.category-header {
+  background: #ffffff;
+  padding: 30px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.category-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.category-header p {
+  margin-top: 8px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Story list */
+.story-list {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Story card */
+.story-card {
+  display: block;
+  padding: 22px 18px;
+  text-decoration: none;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  color: inherit;
+
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.story-card h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+/* Hover effect */
+.story-card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}
+
+/* Mobile only */
+@media (max-width: 600px) {
+  .category-header h1 {
+    font-size: 22px;
+  }
+
+  .story-list {
+    grid-template-columns: 1fr;
+  }
+
+  .story-card h2 {
+    font-size: 18px;
+  }
+}

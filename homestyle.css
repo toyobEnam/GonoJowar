@@ -297,3 +297,23 @@ body.dark .theme-btn-icon {
 .theme-notice.show {
     opacity: 1;
 }
+
+#readStory {
+    height: 50px;
+    width: 100px;
+    border: 2px solid white;
+    color: white;
+    background-color: #07511b;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#readStory:hover {
+    background-color: #034515;
+    border: 3px solid rgb(199, 199, 199);
+}
+
+#readStory:active {
+    background-color: #088529;
+    border: 3px solid rgb(199, 199, 199);
+}
