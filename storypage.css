@@ -92,7 +92,7 @@ body {
 /* Tablet */
 @media (max-width: 1024px) {
     .mainContent p {
-        font-size: 20px;
+        font-size: 19px;
         line-height: 1.5;
     }
 }
@@ -100,7 +100,7 @@ body {
 /* Mobile */
 @media (max-width: 600px) {
     .mainContent p {
-        font-size: 19px;
+        font-size: 18px;
         line-height: 1.4;
     }
 }
@@ -187,10 +187,15 @@ body {
   background: #f0f0f0;
 }
 
-.prev {
+/* .prev {
   display: inline-block;
   margin-bottom: 10px;
 }
+
+.next {
+  display: inline-block;
+  margin-bottom: 10px;
+} */
 
 #theEndText {
   text-align: center;
