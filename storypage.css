@@ -32,6 +32,10 @@ body {
   padding: 20px;
   background: #eaeaea;
   text-align: center;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .leftBar {
@@ -160,6 +164,23 @@ body {
   flex-wrap: wrap;
   gap: 10px; 
   margin: 10px 0;
+}
+
+/* ============= Top Nav ============== */
+
+.topSwitch {
+  margin: 2px 0 10px;
+  padding-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.topNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+  margin: 0;
 }
 
 .ep-list {
