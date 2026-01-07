@@ -7,7 +7,7 @@
   background-color: #0f0f0f;
   color: #cfcfcf;
   padding: 40px 20px;
-  margin-top: 80px;
+  /* margin-top: 80px; */
   font-family: 'Kalpurush', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -33,10 +33,11 @@
   text-decoration: none;
   display: inline-block;
   margin-bottom: 6px;
+  cursor: default;
 }
 
 .footer-title:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .footer-tagline {
