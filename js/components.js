@@ -1,9 +1,11 @@
-const BASE_PATH = location.hostname.includes("github.io")
-  ? "/golper-bahar"
-  : "";
-
-fetch(`${BASE_PATH}/components/footer/footer.html`)
-  .then(res => res.text())
+fetch("./components/footer/footer.html")
+  .then(res => {
+    if (!res.ok) throw new Error("Network response was not ok");
+    return res.text();
+  })
   .then(html => {
-    document.getElementById("footer").innerHTML = html;
-  });
+    const mount = document.getElementById("footer");
+    if (!mount) throw new Error("#footer not found");
+    mount.innerHTML = html;
+  })
+  .catch(err => console.error("Footer load error:", err));
