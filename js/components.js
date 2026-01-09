@@ -16,10 +16,11 @@ loadComponent("footer", "/components/footer/footer.html");
 
 
 function goBack() {
-  if (document.referrer && document.referrer.includes(location.hostname)) {
-    history.back();
+  if (window.history.length > 1) {
+    window.history.back();
   } else {
     window.location.href = "https://www.golperbahar.com";
   }
 }
+
 
