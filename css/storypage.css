@@ -6,6 +6,13 @@
   text-decoration: none;
 }
 
+@font-face {
+  font-family: "LiPurnoPran";
+  src: url("../assets/fonts/LiPurnoPran.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: 'Kalpurush', 'Noto Serif Bengali', serif;
@@ -46,6 +53,7 @@ body {
 }
 
 .mainContent {
+  font-family: "LiPurnoPran", 'Kalpurush', 'Noto Serif Bengali', serif;
   grid-area: main;
   padding: 25px 80px;
   background: #d8d8d8;
