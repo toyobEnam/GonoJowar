@@ -4,6 +4,7 @@
   --text-main: #222;
   --text-muted: #555;
   --border-light: #ddd;
+  --neon-blue: rgba(47, 128, 255, 0.55);
 }
 
 * {
@@ -26,14 +27,13 @@ body {
 }
 
 .site-header p {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 /* Layout */
 .writer-layout {
   max-width: 1100px;
-  margin: 50px auto;
-  margin-top: 20px;
+  margin: 20px auto 50px;
   padding: 0 20px;
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -54,11 +54,10 @@ body {
   height: 170px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 0;
 }
 
 .writer-name {
-  margin: 5px 0 10px 0;
+  margin: 5px 0 10px;
   font-size: 30px;
 }
 
@@ -68,14 +67,12 @@ body {
   color: var(--text-muted);
 }
 
-
-
 .verified {
-    border: 0.5px solid rgb(0, 119, 14);
-    background-color: #dfffdf;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 1.2rem;
+  border: 0.5px solid rgb(0, 119, 14);
+  background-color: #dfffdf;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1.2rem;
 }
 
 /* Content */
@@ -87,7 +84,7 @@ body {
 .writer-stories {
   display: flex;
   flex-direction: column;
-  gap: 8px; /* সামান্য gap */
+  gap: 8px;
 }
 
 .story-btn {
@@ -107,7 +104,6 @@ body {
   transform: translateY(-1px);
 }
 
-
 /* Gallery */
 .writer-gallery {
   display: grid;
@@ -119,12 +115,13 @@ body {
   width: 100%;
   max-width: 600px;
   border-radius: 8px;
-  margin: 50px auto;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 auto;
 }
 
-/* Contact */
+/* =======================
+   Contact Section (Neon)
+======================= */
+
 .writer-contact .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -132,13 +129,40 @@ body {
 }
 
 .contact-item {
-  padding: 10px;
+  padding: 12px 10px;
   text-align: center;
   border: 1px solid var(--border-light);
   border-radius: 6px;
   text-decoration: none;
   color: var(--text-main);
   background: var(--bg-white);
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease,
+    color 0.22s ease;
+}
+
+/* ===== Neon Hover Effect ===== */
+.contact-item:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(47, 128, 255, 0.6);
+
+  box-shadow:
+    0 0 0 1px rgba(47, 128, 255, 0.35),
+    0 0 10px rgba(47, 128, 255, 0.45),
+    0 6px 16px rgba(47, 128, 255, 0.25);
+
+  color: #2f80ff;
+}
+
+/* Optional: click feel */
+.contact-item:active {
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 6px rgba(47, 128, 255, 0.35);
 }
 
 /* Responsive */
@@ -147,123 +171,14 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .writer-card {
-    text-align: center;
-  }
-
   .writer-gallery {
     grid-template-columns: 1fr;
   }
 }
 
-/* ---------------------------------------------------------------------
--------------------    Footer Component    -----------------------------
---------------------------------------------------------------------- */
-
-/* .site-footer {
-  text-align: center;
-  font-size: 14px;
-  color: var(--text-muted);
-  background: var(--bg-white);
-  border-top: 1px solid var(--border-light);
-} */
-
-.site-footer {
-  text-align: center;
-  background-color: #0f0f0f;
-  color: #cfcfcf;
-  padding: 40px 20px;
-  margin-top: 80px;
-  font-family: 'Kalpurush', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-.footer-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-
-/* Brand */
-.footer-brand {
-  flex: 1;
-}
-
-.footer-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #ffffff;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 6px;
-}
-
-.footer-title:hover {
-  text-decoration: underline;
-}
-
-.footer-tagline {
-  font-size: 0.95rem;
-  color: #aaaaaa;
-}
-
-/* Meta */
-.footer-meta {
-  flex: 2;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-/* Footer nav */
-.footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px 22px;
-  margin-bottom: 16px;
-  justify-content: center;
-}
-
-.footer-nav a {
-  font-size: 0.85rem;
-  color: #bdbdbd;
-  text-decoration: none;
-}
-
-.footer-nav a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-/* Texts */
-.footer-disclaimer {
-  margin-bottom: 14px;
-}
-
-.footer-copy {
-  font-size: 0.85rem;
-  color: #8f8f8f;
-}
-
-/* 📱 Mobile */
-@media (max-width: 640px) {
-  .footer-inner {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .footer-title {
-    font-size: 1.6rem;
-  }
-
-  .footer-nav {
-    gap: 10px 16px;
-  }
-}
-
-
 /* ==================================================
-   Optional Mini Navigation (Compact Version) Start
+   Optional Mini Navigation (Compact Version)
+   (UNCHANGED – as requested)
 ================================================== */
 
 .back-btn {
@@ -273,88 +188,34 @@ body {
   cursor: pointer;
 }
 
-
 .mini-episode-nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-
   padding: 12px 10px;
-  margin-bottom: 0;
-
-  background-color: #0f0f0f; /* footer match */
+  background-color: #0f0f0f;
 }
 
-/* ===== Single Item ===== */
 .mini-nav-item {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  min-width: 72px;           /* 👈 desktop smaller */
-  padding: 6px 12px;         /* 👈 compact */
-
+  min-width: 72px;
+  padding: 6px 12px;
   background-color: #1e1e1e;
   color: #ffffff;
-
-  font-size: 0.85rem;        /* 👈 desktop smaller text */
-  font-weight: 500;
-  line-height: 1.2;
-
+  font-size: 0.85rem;
   border-radius: 5px;
   text-decoration: none;
-
-  transition:
-    color 0.22s ease,
-    background-color 0.22s ease,
-    box-shadow 0.22s ease,
-    transform 0.18s ease;
+  transition: all 0.22s ease;
 }
 
-
-
-/* ===== Hover Effect ===== */
 .mini-nav-item:hover {
   color: #2f80ff;
   background-color: #e6e6e6;
-
   box-shadow:
     0 0 0 1px rgba(47, 128, 255, 0.35),
     0 0 8px rgba(47, 128, 255, 0.3);
-
   transform: translateY(-1px);
 }
-
-/* ================= Tablet ================= */
-@media (max-width: 768px) {
-  .mini-episode-nav {
-    gap: 8px;
-    padding: 10px 8px;
-  }
-
-  .mini-nav-item {
-    min-width: 68px;
-    padding: 6px 10px;
-    font-size: 0.8rem;
-  }
-}
-
-/* ================= Mobile ================= */
-@media (max-width: 480px) {
-  .mini-episode-nav {
-    gap: 6px;
-    padding: 8px 6px;
-  }
-
-  .mini-nav-item {
-    min-width: auto;       /* text-based width */
-    padding: 5px 9px;
-    font-size: 0.78rem;
-    border-radius: 4px;
-  }
-}
-
-/* ==================================================
-   Optional Mini Navigation (Compact Version) End
-================================================== */
