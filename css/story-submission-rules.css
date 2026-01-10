@@ -1,0 +1,301 @@
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Body ===== */
+body {
+  font-family: 'Kalpurush', 'Noto Serif Bengali', serif;
+  background: #f3f4f6;
+  color: #1f2937;
+  line-height: 1.7;
+}
+
+/* ===== Main Grid ===== */
+.ruleBox {
+  max-width: 100%;
+  margin: auto;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 16px;
+}
+
+/* ===== Common Card Style ===== */
+.ruleBox > div {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* ===== Header ===== */
+.header {
+  grid-column: span 4;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.header p {
+  opacity: 0.95;
+  font-size: 1rem;
+}
+
+/* ===== Sections ===== */
+.sendRule {
+  grid-column: span 2;
+  display: flex;
+  flex-wrap: wrap;
+  float: inline-start;
+  padding: 30px;
+}
+
+.firstSubmit {
+  grid-column: span 2;
+  padding: 30px;
+}
+
+.benefits {
+  grid-column: span 2;
+  padding: 30px;
+}
+
+.plesiarism {
+  grid-column: span 2;
+  padding: 30px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  grid-column: span 4;
+  text-align: center;
+  background: #111827;
+  color: #d1d5db;
+  font-size: 0.9rem;
+  border-radius: 14px;
+}
+
+/* ===== Headings ===== */
+.ruleBox h2 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #047857;
+}
+
+/* ===== Responsive: Tablet ===== */
+@media (max-width: 900px) {
+  .ruleBox {
+    grid-template-columns: 1fr;
+  }
+
+  .ruleBox > div {
+    grid-column: span 1 !important;
+  }
+
+  .header {
+    padding: 32px 16px;
+  }
+}
+
+/* ===== Responsive: Mobile ===== */
+@media (max-width: 480px) {
+  .ruleBox {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  /* .ruleBox > div {
+    padding: 18px;
+  } */
+
+  .footer {
+    padding: 0px;
+  }  
+
+  .header h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ===== List Polish ===== */
+.ruleBox ul {
+  padding-left: 18px;
+}
+
+.ruleBox ul li {
+  margin-bottom: 10px;
+}
+
+/* ===== Paragraph Polish ===== */
+.ruleBox p {
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+
+/* ===== Special Note ===== */
+.special-note {
+  margin-top: 18px;
+  padding: 14px 16px;
+  background: #f0fdfa;
+  border-left: 4px solid #10b981;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* ===== Connect Buttons ===== */
+.connect {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.connect-btn {
+  border: none;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Email Button */
+.connect-btn.email {
+  background: #2563eb;
+  color: white;
+}
+
+.connect-btn.email:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* WhatsApp Button */
+.connect-btn.whatsapp {
+  background: #25D366;
+  color: white;
+}
+
+.connect-btn.whatsapp:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+}
+
+/* ===== Card Hover (Very Subtle) ===== */
+.ruleBox > div:not(.header):not(.footer):hover {
+  box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+}
+
+
+
+
+
+
+
+/* ==================================================
+   Optional Mini Navigation (Compact Version) Start
+================================================== */
+
+.back-btn {
+  border: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+
+.mini-episode-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 12px 10px;
+  margin-bottom: 0;
+
+  background-color: #0f0f0f; /* footer match */
+}
+
+/* ===== Single Item ===== */
+.mini-nav-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 72px;           /* 👈 desktop smaller */
+  padding: 6px 12px;         /* 👈 compact */
+
+  background-color: #1e1e1e;
+  color: #ffffff;
+
+  font-size: 0.85rem;        /* 👈 desktop smaller text */
+  font-weight: 500;
+  line-height: 1.2;
+
+  border-radius: 5px;
+  text-decoration: none;
+
+  transition:
+    color 0.22s ease,
+    background-color 0.22s ease,
+    box-shadow 0.22s ease,
+    transform 0.18s ease;
+}
+
+
+
+/* ===== Hover Effect ===== */
+.mini-nav-item:hover {
+  color: #2f80ff;
+  background-color: #e6e6e6;
+
+  box-shadow:
+    0 0 0 1px rgba(47, 128, 255, 0.35),
+    0 0 8px rgba(47, 128, 255, 0.3);
+
+  transform: translateY(-1px);
+}
+
+/* ================= Tablet ================= */
+@media (max-width: 768px) {
+  .mini-episode-nav {
+    gap: 8px;
+    padding: 10px 8px;
+  }
+
+  .mini-nav-item {
+    min-width: 68px;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* ================= Mobile ================= */
+@media (max-width: 480px) {
+  .mini-episode-nav {
+    gap: 6px;
+    padding: 8px 6px;
+  }
+
+  .mini-nav-item {
+    min-width: auto;       /* text-based width */
+    padding: 5px 9px;
+    font-size: 0.78rem;
+    border-radius: 4px;
+  }
+}
+
+/* ==================================================
+   Optional Mini Navigation (Compact Version) End
+================================================== */
